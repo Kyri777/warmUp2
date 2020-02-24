@@ -22,3 +22,21 @@ Technical Details
     -The maximum size of a range will be 100 integers
     -The starting number of a range will be: 0 < n < 100
  */
+
+ function mysteryRange (inputString, sizeRange) {
+     var arrNum = inputString.split('');
+     var arr = [];
+     var i = 0;
+     while (arrNum !== []){
+        if (arrNum[0] ===1 ){
+            i=i+1
+            arr.push((arrNum[0]*10)+arrNum[i]);
+            arrNum =arrNum.slice(i+1);
+            i =0;
+        } else {
+            arr.push(arrNum[0]);
+            arrNum =arrNum.slice(1);
+        }
+     }
+     return arr;   
+ }
